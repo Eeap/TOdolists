@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="ajax.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>To do list</title>
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div id="newItemButton"><button href="#add">new item</button></div>
+    <form id="newItemForm">
+        <form id="frm" action="action.jsp">
+            <input type="text" id="itemField" placeholder="Item" />
+            <input type="date" id="userdate" name="userdate" value="2019-09-05">
+            <input type="button" id='add' value="추가">
+        </form>
+    </form>
+
+</div>
+
+<div id="main">
+    <button class="openbtn" onclick="openNav()">☰</button>
+    <h1>To do list</h1>
+    <div id="list_section">
+        <form id="frm" action="action.jsp">
+
+            <input type="date" id="itemsearch" name="userdate" value="2019-09-05">
+            <input type="button" id="list_search" name="list_search" value="검색">
+        </form>
+        <ul>
+            <div class="notice-box">
+                <span id='close' onclick="this.parentNode.style.display = 'none';">&times;</span>
+                <li class="item">Buy movie tickets</li>
+            </div>
+
+        </ul>
+
+
+
+
+    </div>
+    <p>Click on the hamburger menu/bar icon to open the sidebar, and push this content to the right.</p>
+</div>
+<script src="jquery-3.4.1.min.js"></script>
+<script src="./main.js"></script>
+<script src="./ajax.js"></script>
+</body>
+</html>
