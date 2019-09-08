@@ -21,10 +21,10 @@ $(function() {
 
         $('input:text').val('');
     });
-
-    $list.on('delete', 'li', function() {//delete 버튼으로 삭제 기능 구현 필요
-        let $this = $(this);
-        $this.remove();
-    });
+    //
+    //$list.on('delete', 'li', function() {//delete 버튼으로 삭제 기능 구현 필요
+     //   let $this = $(this);
+      //  $this.remove();
+    //});
 
 });

@@ -58,7 +58,12 @@ body {
     transition: margin-left .5s;
     padding: 16px;
 }
-#add{}
+#add{
+    display: inline-block;
+    border:2px;
+    font-size:16px;
+
+}
 #del{}
 #search{}
 #list_section {
@@ -109,6 +114,8 @@ input[type='text'] {
     padding: 6px;
     border: 1px solid #000;
     border-radius: 3px;
+    height: 10px;
+
 }
 
 input[type='button'] {
