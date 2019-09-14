@@ -1,7 +1,7 @@
 {
   "name": "untitled",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,7 @@
     "express-session": "^1.16.2",
     "jquery": "^3.4.1",
     "jsdom": "^15.1.1",
+    "morgan": "^1.9.1",
     "opr": "^0.1.2",
     "require-env": "^0.2.1"
   },

@@ -12,7 +12,7 @@ $("#add").click(()=>{
         return false;
     }
     $.ajax({
-        url:"/api/insert",
+        url:"./api/insert",
         data:{"text":add_text,"date":add_date},
         type:"POST",
         success : function(return_data){

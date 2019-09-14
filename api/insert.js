@@ -46,12 +46,12 @@ const insert=(req,res)=>{
     const doinsert=(todos)=>{
         return new Promise((resolve, reject) =>{
             const newtodo={
-                td_no:todos.td_last_no+1;
-                td_text:text;
-                td_year:year;
-                td_month:month;
-                td_day:day;
-            }
+                td_no: todos.td_last_no+1,
+                td_text:text,
+                td_year:year,
+                td_month:month,
+                td_day:day
+            };
             todos['rows'].push(newtodo);
             todos['td_last_no']++;
             resolve(todos);
@@ -75,7 +75,7 @@ const insert=(req,res)=>{
         })
         .catch((err)=>{
             console.error(err);
-            res.status(500).json(err|{result:false,data[],code:'unknown error'});
+            res.status(500).json(err|{result:false,data:[],code:'unknown error'});
         });
 
 
