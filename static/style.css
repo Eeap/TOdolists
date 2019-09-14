@@ -144,4 +144,8 @@ input[type='button'] {
     width:auto;
     height: auto;
 }
-#list_search{}
+#list_search{
+    display: inline-block;
+    border:2px;
+    font-size:16px;
+}

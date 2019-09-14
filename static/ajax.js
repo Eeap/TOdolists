@@ -3,8 +3,6 @@ $("#add").click(()=>{
    const add_date=$("#userdate").val();
     $("#itemField").val("");
     $("#userdate").val(new Date());
-    var usejson0=JSON.stringify(add_text);
-    var usejson1=JSON.stringify(add_date);
     alert(JSON.stringify(add_text));
     alert(JSON.stringify(add_date));
     if(add_date==""){
@@ -12,7 +10,7 @@ $("#add").click(()=>{
         return false;
     }
     $.ajax({
-        url:"./api/insert",
+        url:"/api/insert",
         data:{"text":add_text,"date":add_date},
         type:"POST",
         success : function(return_data){
@@ -24,6 +22,20 @@ $("#add").click(()=>{
     });
 
 });
-$("#list_search").click(()=>{
 
+$("#list_search").click(()=>{
+    const list_date=$("#itemsearch").val();
+    $("#itemsearch").val(new Date());
+    alert(JSON.stringify(list_date));
+    $.ajax({
+        url:"/api/list",
+        data:{date:list_date},
+        type:"POST",
+        success : function(return_data){
+            alert("success");
+        },
+        error : function(return_data){
+            alert(return_data);
+        }
+    });
 });

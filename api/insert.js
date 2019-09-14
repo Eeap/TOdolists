@@ -17,13 +17,13 @@ const insert=(req,res)=>{
                 if (!text) {
                     reject({result:false, code:'empty_param',data:'text'});
                 }
-                else if(year){
+                else if(!year){
                     reject({result:false, code:'empty_param',data:'year'});
                 }
-                else if(month){
+                else if(!month){
                     reject({result:false, code:'empty_param',data:'month'});
                 }
-                else{
+                else if(!day){
                     reject({result:false, code:'empty_param',data:'day'});
                 }
             }
@@ -46,14 +46,12 @@ const insert=(req,res)=>{
     const doinsert=(todos)=>{
         return new Promise((resolve, reject) =>{
             const newtodo={
-                td_no: todos.td_last_no+1,
                 td_text:text,
                 td_year:year,
                 td_month:month,
                 td_day:day
             };
             todos['rows'].push(newtodo);
-            todos['td_last_no']++;
             resolve(todos);
         });
     };
