@@ -39,3 +39,18 @@ $("#list_search").click(()=>{
         }
     });
 });
+$("#close").click(()=>{
+    const delete_item=$("#close").td_no;
+    alert(JSON.stringify(delete_item));
+    $.ajax({
+        url:"/api/delete",
+        data:{td_no:delete_item},
+        type:"POST",
+        success : function(return_data){
+            alert("success");
+        },
+        error : function(return_data){
+            alert(return_data);
+        }
+    });
+});
